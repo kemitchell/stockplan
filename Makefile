@@ -1,6 +1,9 @@
 %.commonform: %.commonform.mustache %.blanks.json
 	mustache $*.blanks.json $*.commonform.mustache > $@
 
+%.signatures.json: %.signatures.json.mustache %.blanks.json
+	mustache $*.blanks.json $*.signatures.json.mustache > $@
+
 %.docx: %.commonform %.signatures.json %.options %.blanks.json
 	commonform render \
 		--format docx \
