@@ -6,7 +6,7 @@
 		--format docx \
 		--signatures $*.signatures.json \
 		--blanks $*.blanks.json \
-		$(shell cat $*.options) \
+		$(shell mustache $*.blanks.json $*.options) \
 	< $*.commonform \
 	> $@
 

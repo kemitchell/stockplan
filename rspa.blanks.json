@@ -1,1 +1,9 @@
-{}
+{ "Company Name": "NewCo, Inc.",
+  "Stock Plan Name": "2030 Stock Plan",
+  "Acceleration If Not Assumed": false,
+  "Certificated Shares": false,
+  "Double-Trigger": true,
+  "Resignation for Good Reason": true,
+  "Single-Trigger": false,
+  "Transfer Restrictions in Bylaws": false,
+  "Transfer Restrictions in Plan": false }
