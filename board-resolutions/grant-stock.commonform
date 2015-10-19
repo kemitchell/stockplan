@@ -1,0 +1,18 @@
+Stock  Grants \\
+
+    \\ It is in the best interest of the <Company> to offer stock purchase rights (the ""Purchase Rights"") under the <Company>'s stock plan set forth opposite the name of such person on {Stock Schedule} (each a ""Purchaser"" and collectively the ""Purchaser"") and in the amounts opposite each person's name in Exhibit D hereto.
+
+    \\ It is in the best interest of the <Company> to offer each person (each a ""Purchaser"") listed on {Stock Grant List} (the ""Stock Grant List"") rights under the <Company>'s stock plan to purchase the number of shares of the <Company>'s Common Stock listed opposite their name (the ""Purchase Rights"").
+
+    \\ The <Board> authorizes and approves the <Purchase Rights>.
+
+    \\ In connection with the granting of the <Purchase Rights>, each <Purchaser> shall sign and deliver to the <Company> a restricted stock purchase agreement in the form previously approved by the <Board>.
+
+    \\ Each <Purchaser> shall be offered the <Purchase Rights> at the purchase price per share listed opposite their name on the <Stock Grant List>. Each purchase price shall be payable per the terms of the <Purchaser>'s restricted stock purchase agreement.
+
+    \\ That the shares of Common Stock purchasable on exercise of the <Purchase Rights> shall be subject to repurchase by the <Company> on termination of a <Purchaser>'s employment with the <Company> for any reason. Each <Purchaser>'s shares shall be released from the repurchase option on the vesting schedule listed next to their name on the <Stock Grant List>, subject to continued employment with the <Company>.
+
+Stock Grant List \\
+    {{#Stock Grants}}
+    \\ {{{Name}}}: rights to purchase {{{Shares}}} shares at {{{Price per Share}}} per share under the {{{Stock Plan}}}. The "Vesting Commencement Date" shall be {{{Vesting Commencement Date}}}. {{{Vesting Schedule}}}.
+    {{/Stock Grants}}
