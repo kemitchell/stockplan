@@ -35,4 +35,4 @@ option/packet.pdf: option/notice.pdf plan.pdf option/agreement.pdf option/exerci
 .PHONY: clean
 
 clean:
-	rm -rf *.docx *.pdf stock/*.docx stock/*.pdf option/*.docx option/*.pdf
+	rm -rf plan.docx rule506.pdf plan.pdf stock/*.docx stock/*.pdf option/*.docx option/*.pdf
