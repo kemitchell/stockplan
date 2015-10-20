@@ -32,4 +32,4 @@ plan.docx: plan.commonform plan.options plan.blanks.json
 .PHONY: clean
 
 clean:
-	rm -rf *.docx *.pdf
+	rm -rf *.docx *.pdf restrictedstock/*.docx restrictedstock/*.pdf
