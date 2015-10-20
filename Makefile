@@ -26,6 +26,14 @@ plan.docx: plan.commonform plan.options plan.blanks.json
 	< plan.commonform \
 	> $@
 
+option/agreement.docx: option/agreement.commonform option/agreement.options option/agreement.blanks.json
+	commonform render \
+		--format docx \
+		--blanks option/agreement.blanks.json \
+		$(shell mustache option/agreement.blanks.json option/agreement.options) \
+	< option/agreement.commonform \
+	> $@
+
 %.pdf: %.docx
 	doc2pdf $<
 
