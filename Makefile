@@ -1,4 +1,4 @@
-all: restrictedstock/packet.pdf option/packet.pdf
+all: restrictedstock/packet.pdf option/packet.pdf plan.pdf
 
 restrictedstock/packet.pdf: restrictedstock/rspa.pdf plan.pdf restrictedstock/stockpower.pdf restrictedstock/acknowledgment.pdf restrictedstock/83b.pdf rule506.pdf restrictedstock/receipt.pdf restrictedstock/consent.pdf
 	pdftk $^ cat output $@
