@@ -1,0 +1,30 @@
+[
+  {
+    "header":"The Purchaser executes this Receipt and Consent as of the date written below."
+    , "term": "Purchaser"
+    {{#Purchaser}}
+    , "name": "{{{Purchaser}}}"
+    {{/Purchaser}}
+    , "information": [ "date", "address", "email" ]
+  }
+  , {
+    {{#Spouse}}
+      {{#Purchaser}}
+      "header": "{{{Spouse}}}, spouse of {{{Purchaser}}}, executes this Receipt and Consent as of the same date."
+      , "name": "{{{Spouse}}}"
+      {{/Purchaser}}
+      {{^Purchaser}}
+      "header": "{{{Spouse}}}, spouse of ____________, executes this Receipt and Consent as of the same date."
+      , "name": "{{{Spouse}}}"
+      {{/Purchaser}}
+    {{/Spouse}}
+    {{^Spouse}}
+      {{#Purchaser}}
+      "header": "____________, spouse of {{{Purchaser}}}, executes this Receipt and Consent as of the same date."
+      {{/Purchaser}}
+      {{^Purchaser}}
+      "header": "____________, spouse of ____________, executes this Receipt and Consent as of the same date."
+      {{/Purchaser}}
+    {{/Spouse}}
+  }
+]

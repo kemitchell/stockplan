@@ -4,14 +4,6 @@
 %.signatures.json: %.signatures.json.mustache %.blanks.json
 	mustache $*.blanks.json $*.signatures.json.mustache > $@
 
-%.docx: %.commonform %.options %.blanks.json
-	commonform render \
-		--format docx \
-		--blanks $*.blanks.json \
-		$(shell mustache $*.blanks.json $*.options) \
-	< $*.commonform \
-	> $@
-
 %.docx: %.commonform %.signatures.json %.options %.blanks.json
 	commonform render \
 		--format docx \
@@ -20,6 +12,14 @@
 		$(shell mustache $*.blanks.json $*.options) \
 	< $*.commonform \
 	> $@
+
+# %.docx: %.commonform %.options %.blanks.json
+# 	commonform render \
+# 		--format docx \
+# 		--blanks $*.blanks.json \
+# 		$(shell mustache $*.blanks.json $*.options) \
+# 	< $*.commonform \
+# 	> $@
 
 %.pdf: %.docx
 	doc2pdf $<

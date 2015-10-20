@@ -1,0 +1,29 @@
+[
+  {
+    "header": "The undersigned executes this Election Under Section 83(b) of the Internal Revenue Code of 1986 as fo the date written below."
+    {{#Purchaser}}
+    , "name": "{{{Purchaser}}}"
+    {{/Purchaser}}
+    , "information": [ "address", "date" ]
+  }
+  , {
+    {{#Spouse}}
+      {{#Purchaser}}
+      "header": "{{{Spouse}}}, spouse of {{{Purchaser}}}, executes this Election Under Section 83(b) of the Internal Revenue Code of 1986 as of the same date."
+      , "name": "{{{Spouse}}}"
+      {{/Purchaser}}
+      {{^Purchaser}}
+      "header": "{{{Spouse}}}, spouse of ____________, executes this Election Under Section 83(b) of the Internal Revenue Code of 1986 as of the same date."
+      , "name": "{{{Spouse}}}"
+      {{/Purchaser}}
+    {{/Spouse}}
+    {{^Spouse}}
+      {{#Purchaser}}
+      "header": "____________, spouse of {{{Purchaser}}}, executes this Election Under Section 83(b) of the Internal Revenue Code of 1986 as of the same date."
+      {{/Purchaser}}
+      {{^Purchaser}}
+      "header": "____________, spouse of ____________, executes this Election Under Section 83(b) of the Internal Revenue Code of 1986 as of the same date."
+      {{/Purchaser}}
+    {{/Spouse}}
+  }
+]
