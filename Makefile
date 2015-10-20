@@ -1,6 +1,6 @@
 all: stock/packet.pdf option/packet.pdf plan.pdf
 
-stock/packet.pdf: stock/rspa.pdf plan.pdf stock/stockpower.pdf stock/acknowledgment.pdf stock/83b.pdf rule506.pdf stock/receipt.pdf stock/consent.pdf
+stock/packet.pdf: stock/agreement.pdf plan.pdf stock/stockpower.pdf stock/acknowledgment.pdf stock/83b.pdf rule506.pdf stock/receipt.pdf stock/consent.pdf
 	pdftk $^ cat output $@
 
 option/packet.pdf: option/notice.pdf plan.pdf option/agreement.pdf option/exercise.pdf rule506.pdf
