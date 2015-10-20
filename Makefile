@@ -1,6 +1,9 @@
-all: restrictedstock/packet.pdf
+all: restrictedstock/packet.pdf option/packet.pdf
 
-restrictedstock/packet.pdf: restrictedstock/rspa.pdf plan.pdf restrictedstock/stockpower.pdf restrictedstock/acknowledgment.pdf restrictedstock/83b.pdf restrictedstock/rule506.pdf restrictedstock/receipt.pdf restrictedstock/consent.pdf
+restrictedstock/packet.pdf: restrictedstock/rspa.pdf plan.pdf restrictedstock/stockpower.pdf restrictedstock/acknowledgment.pdf restrictedstock/83b.pdf rule506.pdf restrictedstock/receipt.pdf restrictedstock/consent.pdf
+	pdftk $^ cat output $@
+
+option/packet.pdf: option/notice.pdf plan.pdf option/agreement.pdf option/exercise.pdf rule506.pdf
 	pdftk $^ cat output $@
 
 %.commonform: %.commonform.mustache %.blanks.json
