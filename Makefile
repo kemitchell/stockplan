@@ -21,20 +21,12 @@ option/packet.pdf: option/notice.pdf plan.pdf option/agreement.pdf option/exerci
 	< $*.commonform \
 	> $@
 
-plan.docx: plan.commonform plan.options plan.blanks.json
+%.docx: %.commonform %.nosignatures %.options %.blanks.json
 	commonform render \
 		--format docx \
-		--blanks plan.blanks.json \
-		$(shell mustache plan.blanks.json plan.options) \
-	< plan.commonform \
-	> $@
-
-option/agreement.docx: option/agreement.commonform option/agreement.options option/agreement.blanks.json
-	commonform render \
-		--format docx \
-		--blanks option/agreement.blanks.json \
-		$(shell mustache option/agreement.blanks.json option/agreement.options) \
-	< option/agreement.commonform \
+		--blanks $*.blanks.json \
+		$(shell mustache $*.blanks.json $*.options) \
+	< $*.commonform \
 	> $@
 
 %.pdf: %.docx
