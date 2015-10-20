@@ -1,6 +1,6 @@
-all: restrictedstock/packet.pdf option/packet.pdf plan.pdf
+all: stock/packet.pdf option/packet.pdf plan.pdf
 
-restrictedstock/packet.pdf: restrictedstock/rspa.pdf plan.pdf restrictedstock/stockpower.pdf restrictedstock/acknowledgment.pdf restrictedstock/83b.pdf rule506.pdf restrictedstock/receipt.pdf restrictedstock/consent.pdf
+stock/packet.pdf: stock/rspa.pdf plan.pdf stock/stockpower.pdf stock/acknowledgment.pdf stock/83b.pdf rule506.pdf stock/receipt.pdf stock/consent.pdf
 	pdftk $^ cat output $@
 
 option/packet.pdf: option/notice.pdf plan.pdf option/agreement.pdf option/exercise.pdf rule506.pdf
@@ -35,4 +35,4 @@ option/packet.pdf: option/notice.pdf plan.pdf option/agreement.pdf option/exerci
 .PHONY: clean
 
 clean:
-	rm -rf *.docx *.pdf restrictedstock/*.docx restrictedstock/*.pdf
+	rm -rf *.docx *.pdf stock/*.docx stock/*.pdf
